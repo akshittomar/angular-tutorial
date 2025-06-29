@@ -48,8 +48,8 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
-            }
-          },
+            } 
+          }, 
           "defaultConfiguration": "production"
         },
         "serve": {
