@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TestPipe } from './test-pipe';
+import { Login } from './login/login';
+import { TestComponent } from './test/test.component';
 
 @Component({
   selector: 'app-root',
- // imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule, TestPipe,Login, TestComponent], // Import CommonModule and TestPipe for template usage
   templateUrl: './app.html',
-  styleUrl: './app.css',
-  imports: [TestPipe]  // Import the testPipe here to use in the template
+  styleUrls: ['./app.css']
 })
 export class App {
 
