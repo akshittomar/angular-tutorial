@@ -1,0 +1,20 @@
+.btn {
+  width: 80px;
+    height: 80px;
+    margin: 3%;
+    border-radius: 60%;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: azure;
+
+}
+.color1{
+    background-color: rgb(43, 162, 217);
+}
+.color2{
+    background-color: rgb(229, 221, 131);
+}
+.color3{
+    background-color: rgb(12, 240, 20);
+}
