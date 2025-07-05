@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TestPipe } from './test-pipe';
 import { Login } from './login/login';
 import { TestComponent } from './test/test.component';
+import { VariableDecleration } from './variable-decleration/variable-decleration';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TestPipe,Login, TestComponent], // Import CommonModule and TestPipe for template usage
+  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration], // Import CommonModule and TestPipe for template usage
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

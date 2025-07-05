@@ -6,4 +6,8 @@ styleUrl:"./test.component.css"})
 
 export class TestComponent {
 
+helloWorld(){
+    alert("Hello World");
+}
+
 }
