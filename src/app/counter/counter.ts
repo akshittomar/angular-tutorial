@@ -14,6 +14,7 @@ export class Counter {
     this.count = value +1 ;
   }
   decrement(value : number){
+    if(value>=1)
     this.count=value-1;
   }
   reset(value : number){
