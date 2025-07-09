@@ -1,1 +1,56 @@
-<p>enent-tutorial works!</p>
+<hr>
+<h3>Enent Tutorial Section</h3>
+
+<small>We will here talk about events in Angular.js</small>
+<p>In Angular, events are actions that occur in the application, such as user interactions or system-generated events. Angular provides a way to handle these events using event binding.</p>
+<small>Types Of Events In Angular</small>
+<ul>
+  <li>Click Events</li>
+  <li>Mouse Events</li>
+  <li>Keyboard Events</li>
+  <li>Form Events</li>
+  <li>Custom Events</li>
+</ul>
+
+
+<p  (click)="message()"  style="cursor: pointer;"  >enent-tutorial works!</p>
+
+<button  (click)="eventDetails($event)" name="Click me button"  style="cursor: pointer;"  >Click Me !</button>
+
+<div style="display: flex; flex-direction: row; justify-content: space-evenly ; margin-top: 5%; margin-right: 5%;" >
+
+<div style="background-color: aquamarine; width: 80px; height:80px;" (mouseenter)="mouseEnter($event)" >Mouse Enter</div>
+
+<div style="background-color: rgb(212, 173, 66); width: 80px; height: 80px;"  (mouseleave)="mouseLeave($event)" >Mouse Leave</div>
+
+<div style="background-color: rgb(213, 99, 112); width: 80px; height: 80px;" (mouseover)="mouseOver($event)" >Mouse Over</div>
+
+
+
+</div>
+
+<textarea 
+style="margin-bottom: 5%;"
+  (input)="handleTextInput($event)" 
+  placeholder="Enter text..." 
+  autocorrect="off" 
+  autocapitalize="off" 
+  spellcheck="false"
+  disabled="true"
+></textarea>
+<div>
+<!-- Input field with input event -->
+<label for="inputField">Enter text without onchange:</label>
+<input id="inputField" type="text" style="margin-bottom: 5%;" (input)="onInputChange($event)" />&nbsp;&nbsp;
+<!--  input mai onInputChange tab trigger hoga jab koi bhi character likhte hai  -->
+
+
+<!-- Input field with onchange event -->
+<label for="changeField">Enter text with onchange:</label>
+<input id="changeField" type="text" (change)="onInputChangeFunc($event)" />
+<!-- change is same like onchange of react , change mai onInputChangeFunc tab trigger hoga jab enter key press karenge -->
+
+</div>
+
+
+
