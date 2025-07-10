@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'event-tutorial',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './enent-tutorial.html',
   styleUrl: './enent-tutorial.css'
 })
@@ -47,21 +47,49 @@ console.log(event.type); // This will log the type of the event, e.g., 'click'
 
 
 }
-
+inputValue:string = "";
 // Event handler for input change event
 onInputChange(event: Event): void {
     const input = event.target as HTMLInputElement;
     // You can access the input value like this:
+    this.inputValue = input.value;
   console.log('Input change event:', input.value);
 }
 
-
+inputChangeValue:string = "";
 onInputChangeFunc(event: Event): void {
     const input = event.target as HTMLInputElement;
+    this.inputChangeValue= input.value;
     // You can access the input value like this:
   console.log('Input change event:', input.value);
 }
 
+userName:string = '';
+showUserName = "";
 
+storingName(event:Event){
+const input = event.target as HTMLInputElement ;
+this.userName = input.value ;
+
+}
+
+
+setUserName(event:MouseEvent){
+
+this.showUserName = '';
+alert("UserName Set Successful !!! ");
+console.log("UserName Set Successful !!! ",this.userName);
+
+}
+
+
+
+
+getUserName(){
+
+  
+this.showUserName = this.userName ; 
+console.log("UserName is : ",this.showUserName);
+}
 
 }
