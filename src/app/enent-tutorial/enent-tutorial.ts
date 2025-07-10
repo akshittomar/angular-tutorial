@@ -4,13 +4,36 @@ import { CommonModule } from '@angular/common';
   selector: 'event-tutorial',
   imports: [CommonModule],
   templateUrl: './enent-tutorial.html',
-  styleUrl: './enent-tutorial.css'
+  styleUrls: ['./enent-tutorial.css']  // Fix property name from styleUrl to styleUrls
 })
 export class EnentTutorial {
+
+  // Alert the value passed from the template reference variable
+  showValue(val: string) {
+    alert(val);
+  }
+
+  // Alert the city value passed from the template reference variable
+  showCity(val: string) {
+    alert('City value: ' + val);
+  }
+
+  // Alert various properties of the input element passed from the template reference variable
+  showInputProps(input: HTMLInputElement) {
+    alert(
+      'Value: ' + input.value + '\\n' +
+      'Type: ' + input.type + '\\n' +
+      'Placeholder: ' + input.placeholder + '\\n' +
+      'Disabled: ' + input.disabled + '\\n' +
+      'ID: ' + input.id + '\\n' +
+      'Name: ' + input.name
+    );
+  }
 
 message(){
   alert("I am click event ");
 }
+
 
 mouseEnter(event:MouseEvent){
   console.log("MOUSE ENTER TRIGGERED ",event.type," on element: ", event.target);

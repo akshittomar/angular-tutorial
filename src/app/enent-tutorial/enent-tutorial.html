@@ -67,5 +67,28 @@ style="margin-bottom: 5%;"
 <button (click)="setUserName($event)" >Set UserName </button> &nbsp; 
 <button (click)="getUserName()" >Get UserName </button>
 
+<hr>
+
+<h3>Template Reference Variables in Angular</h3>
+<p>In Angular, you can add a <code>#variableName</code> to an element (like <code><input></code>).</p>
+<p>This allows you to access the DOM element’s properties (like <code>.value</code>) directly in your event handlers from the template.</p>
+<!-- Tutorial section added for template reference variables -->
+
+<!-- Template Reference Variable Example -->
+<label for="userInput">Enter something:</label>
+<input #userInput type="text" placeholder="Enter something..." />
+<button (click)="showValue(userInput.value)">Show Value</button>
+
+<p>Here’s a full example using Angular template reference variables (#) with an <code><input></code>. You’ll see how to access different properties and use them in your component:</p>
+
+<label for="cityInput">Enter City:</label>
+<input #cityInput type="text" id="cityInput" placeholder="City Name" />
+
+<!-- Accessing value property -->
+<button (click)="showCity(cityInput.value)">Show Value</button>
+
+<!-- Accessing other properties -->
+<button (click)="showInputProps(cityInput)">Show All Properties</button>
+
 
 
