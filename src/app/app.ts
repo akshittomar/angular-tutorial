@@ -7,12 +7,14 @@ import { VariableDecleration } from './variable-decleration/variable-decleration
 import { Counter } from './counter/counter';
 import { EnentTutorial } from './enent-tutorial/enent-tutorial';
 import { AppStyleTutorial } from './app-style-tutorial/app-style-tutorial';
+import { IfElseTutorial } from './if-else-tutorial/if-else-tutorial';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial], 
+  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial], 
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

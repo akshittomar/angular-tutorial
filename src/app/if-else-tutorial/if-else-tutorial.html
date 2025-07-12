@@ -1,0 +1,20 @@
+<hr>
+<h2>If Else Tutorial</h2>
+<button (click)="toHide()" >Hide Me </button> &nbsp;&nbsp; <button (click)="toShow()" >Show Me </button>
+&nbsp;&nbsp; <button (click)="toToggle()" >Toggle Me </button>
+
+@if(value){
+    <br>
+<div style="background-color: aquamarine; width: 200px; height: 200px; margin-top: 1%;" ></div>
+}
+<br>
+<h3>Simple Car Eligible Program</h3>&nbsp;&nbsp;
+<label for="age"  >Enter your age : </label> 
+<input  type="number" min="0" max="100"  (input)="submitAge($event)" id="for" placeholder="Enter age" />
+<br>
+<button (click)="isEligible()" style="margin-top: 1%;" >Check Eligibility</button><br>
+@if(eligibility){
+    <p style="color: green; font-weight: bold;" >You are eligible for car </p>
+} @else() {
+    <p style="color: red; font-weight: bold;" >You are not eligible for car </p>
+}

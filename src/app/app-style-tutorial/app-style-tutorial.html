@@ -16,7 +16,8 @@
   "src/styles.css",
   "src/global2.css"
 ]</code></pre>
-    </ul>
+      <li>The last file in the styles array has higher precedence for conflicting selectors.</li>    
+</ul>
   </li>
   <li><strong>Multiple CSS Files in a Component</strong>
     <ul>
@@ -24,6 +25,8 @@
       <pre><code>&#64;Component({{ '{' }}
   styleUrls: ['./comp1.css', './comp2.css']
 {{ '}' }})</code></pre>
+
+        <li>The last file in the styleUrls array has higher precedence for conflicting selectors.</li>
     </ul>
   </li>
   <li><strong>Internal CSS (Within a Component)</strong>
