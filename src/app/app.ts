@@ -6,11 +6,13 @@ import { TestComponent } from './test/test.component';
 import { VariableDecleration } from './variable-decleration/variable-decleration';
 import { Counter } from './counter/counter';
 import { EnentTutorial } from './enent-tutorial/enent-tutorial';
+import { AppStyleTutorial } from './app-style-tutorial/app-style-tutorial';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial], // Import CommonModule and TestPipe for template usage
+  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial], 
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

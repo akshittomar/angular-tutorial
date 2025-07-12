@@ -1,0 +1,54 @@
+<h3>Styling in Angular</h3>
+<ul>
+  <li><strong>Component-Level CSS (Encapsulation)</strong>
+    <ul>
+      <li>Each Angular component can have its own CSS file (e.g., parent.component.css, child.component.css).</li>
+      <li>The styles defined in a parent component’s CSS do not affect the child component’s styles.</li>
+      <li>Each component’s <code>styleUrls</code> property controls which CSS files apply to that component only.</li>
+    </ul>
+  </li>
+  <li><strong>Global CSS</strong>
+    <ul>
+      <li>To apply styles globally (across all components), edit the <code>src/styles.css</code> file.</li>
+      <li>To add multiple global CSS files, update the <code>styles</code> array in <code>angular.json</code>:
+        <pre><code>"styles": [
+  "src/styles.css",
+  "src/global2.css"
+]</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Multiple CSS Files in a Component</strong>
+    <ul>
+      <li>You can import multiple CSS files in a component by adding their paths to the <code>styleUrls</code> array:
+        <pre><code>@Component({
+  styleUrls: ['./comp1.css', './comp2.css']
+})</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Internal CSS (Within a Component)</strong>
+    <ul>
+      <li>You can write internal CSS using the <code><style></code> tag directly in the component’s template:</li>
+      <pre><code><style>
+  .my-class { color: red; }
+</style></code></pre>
+    </ul>
+  </li>
+  <li><strong>Inline CSS (HTML Attribute)</strong>
+    <ul>
+      <li>You can use the <code>style</code> attribute for inline CSS on any HTML element:</li>
+      <pre><code><div style="color: blue;">Inline styled text</div></code></pre>
+    </ul>
+  </li>
+  <li><strong>Inline Styles in TypeScript</strong>
+    <ul>
+      <li>You can define small CSS rules directly in the component’s decorator using the <code>styles</code> property:</li>
+      <pre><code>@Component({
+  styles: [`.special { font-weight: bold; }`]
+})</code></pre>
+    </ul>
+  </li>
+</ul>
+<p><strong>Summary:</strong><br/>
+Angular supports component-scoped CSS, global CSS, multiple CSS files per component, internal and inline styles, and even inline styles in TypeScript. Parent and child component styles are encapsulated by default, so they don’t interfere with each other. For global styles, use <code>styles.css</code> or add more files in <code>angular.json</code>.</p>
