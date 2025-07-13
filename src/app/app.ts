@@ -8,13 +8,14 @@ import { Counter } from './counter/counter';
 import { EnentTutorial } from './enent-tutorial/enent-tutorial';
 import { AppStyleTutorial } from './app-style-tutorial/app-style-tutorial';
 import { IfElseTutorial } from './if-else-tutorial/if-else-tutorial';
+import { SwitchCaseTutorial } from './switch-case-tutorial/switch-case-tutorial';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial], 
+  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial], 
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

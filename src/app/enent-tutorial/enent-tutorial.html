@@ -92,3 +92,61 @@ style="margin-bottom: 5%;"
 
 
 
+<h3>Common Angular Event Bindings and Their Types</h3>
+
+<table border="1" cellpadding="6" style="border-collapse: collapse; text-align: left;">
+  <thead>
+    <tr>
+      <th>Template Event Binding</th>
+      <th>TypeScript Parameter Type</th>
+      <th>Example in .ts file</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>(click)="func($event)"</code></td>
+      <td><code>MouseEvent</code></td>
+      <td><code>func(event: MouseEvent) {{ '{' }} ... {{ '}' }}</code></td>
+    </tr>
+    <tr>
+      <td><code>(input)="func($event)"</code></td>
+      <td><code>Event</code></td>
+      <td><code>func(event: Event) {{ '{' }} ... {{ '}' }}</code></td>
+    </tr>
+    <tr>
+      <td><code>(change)="func($event)"</code></td>
+      <td><code>Event</code></td>
+      <td><code>func(event: Event) {{ '{' }} ... {{ '}' }}</code></td>
+    </tr>
+    <tr>
+      <td><code>(mouseenter)="func($event)"</code></td>
+      <td><code>MouseEvent</code></td>
+      <td><code>func(event: MouseEvent) {{ '{' }} ... {{ '}' }}</code></td>
+    </tr>
+    <tr>
+      <td><code>(mouseleave)="func($event)"</code></td>
+      <td><code>MouseEvent</code></td>
+      <td><code>func(event: MouseEvent) {{ '{' }} ... {{ '}' }}</code></td>
+    </tr>
+    <tr>
+      <td><code>(mouseover)="func($event)"</code></td>
+      <td><code>MouseEvent</code></td>
+      <td><code>func(event: MouseEvent) {{ '{' }} ... {{ '}' }}</code></td>
+    </tr>
+    <tr>
+      <td><code>(keydown)="func($event)"</code></td>
+      <td><code>KeyboardEvent</code></td>
+      <td><code>func(event: KeyboardEvent) {{ '{' }} ... {{ '}' }}</code></td>
+    </tr>
+    <tr>
+      <td><code>(keyup)="func($event)"</code></td>
+      <td><code>KeyboardEvent</code></td>
+      <td><code>func(event: KeyboardEvent) {{ '{' }} ... {{ '}' }}</code></td>
+    </tr>
+  </tbody>
+  Tip:
+
+For most input-related events, use Event.
+For mouse events, use MouseEvent.
+For keyboard events, use KeyboardEvent.
+</table>
