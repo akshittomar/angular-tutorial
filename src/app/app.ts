@@ -9,13 +9,14 @@ import { EnentTutorial } from './enent-tutorial/enent-tutorial';
 import { AppStyleTutorial } from './app-style-tutorial/app-style-tutorial';
 import { IfElseTutorial } from './if-else-tutorial/if-else-tutorial';
 import { SwitchCaseTutorial } from './switch-case-tutorial/switch-case-tutorial';
+import { ForLoopTutorial } from './for-loop-tutorial/for-loop-tutorial';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial], 
+  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial , ForLoopTutorial], 
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
