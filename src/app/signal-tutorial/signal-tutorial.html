@@ -1,1 +1,22 @@
-<p>signal-tutorial works!</p>
+<hr>
+<h2>Signal Tutorial </h2>
+
+<p><strong>What is a Signal?</strong> A signal is a special kind of reactive value that notifies the system when it changes, allowing automatic updates to parts of the application that depend on it.</p>
+
+<p><strong>Signal vs Normal Value:</strong> Signals trigger <code>effect()</code> functions to run whenever their value changes, enabling reactive updates. In contrast, normal values do not trigger <code>effect()</code> and changes to them do not automatically update dependent parts of the application.</p>
+
+<p>Value of Signal <small style="background-color: rgb(170, 170, 170);"> check console it triggers effect every time </small> : {{val()}}</p>
+<p>Value of Data : {{x}}</p>
+
+<button (click)="signalUpdate()"  >Update Signal Value</button> <br><br>
+<button (click)="dataUpdate()"  >Update Data Value</button><br>
+<div>
+    <span>There are 2 types of Signals : 1. Computed Signal 2 . Wrtitable Signal</span>
+</div><br>
+<p>1.Computed Signal : this is a signal that cannot be changed directly. It is derived from other signals or values.</p>
+<p>Computed Value depends on value of 'val() Signal' <small style="background-color: rgb(170, 170, 170);" >(Click on Update Signal Value button)</small>  : <strong>{{computedValue()}}</strong> </p>
+<p>2.Writable Signal :  this is a signal that can hold a number, string, or boolean value
+ WritableSignal allows you to change the value of the signal directly without any dependency </p>
+<p>Different Values of a Writable Signal : {{differentValue()}}</p> &nbsp;&nbsp; <button (click)="updateDifferentValue()" >Change Datatype</button>
+
+

@@ -10,13 +10,14 @@ import { AppStyleTutorial } from './app-style-tutorial/app-style-tutorial';
 import { IfElseTutorial } from './if-else-tutorial/if-else-tutorial';
 import { SwitchCaseTutorial } from './switch-case-tutorial/switch-case-tutorial';
 import { ForLoopTutorial } from './for-loop-tutorial/for-loop-tutorial';
+import { SignalTutorial } from './signal-tutorial/signal-tutorial';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial , ForLoopTutorial], 
+  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial , ForLoopTutorial , SignalTutorial], 
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
