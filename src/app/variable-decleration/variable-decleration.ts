@@ -15,7 +15,7 @@ export class VariableDecleration {
   age: number = 30; // Declaring a variable named 'age' of type number and initializing it with 30
   isActive: boolean = true; // Declaring a variable named 'isActive' of type boolean and initializing it with true
   hobbies: string[] = ['reading', 'gaming', 'coding']; // Declaring an array of strings named 'hobbies' and initializing it with three hobbies      
-  user = { // Declaring an object named 'user' with properties 'name' and 'age'
+  user : object = { // Declaring an object named 'user' with properties 'name' and 'age'
     name: 'John',
     age: 30
   };

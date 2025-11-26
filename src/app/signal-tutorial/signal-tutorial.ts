@@ -31,6 +31,14 @@ computedValue: Signal<number> = computed(() => this.val() + 10);
 updateDifferentValue(){
 if(this.differentValue()==10){
 this.differentValue.set("Hello");
+//this.differentValue.update(value => value + 1);  
+//we can also use update method to change the value
+//but it can work only for 1 type of value
+//for example, if we want to increment a number, we can use update method like this
+//this.differentValue.update(value => value + 1);
+//but if we want to change the value to a string or boolean, we have to use set method
+//this.differentValue.set("Hello");
+//this.differentValue.set(true);
 }
 else if(this.differentValue()=="Hello")
 {

@@ -21,17 +21,17 @@ export class EnentTutorial {
   // Alert various properties of the input element passed from the template reference variable
   showInputProps(input: HTMLInputElement) {
     alert(
-      'Value: ' + input.value + '\\n' +
-      'Type: ' + input.type + '\\n' +
-      'Placeholder: ' + input.placeholder + '\\n' +
-      'Disabled: ' + input.disabled + '\\n' +
-      'ID: ' + input.id + '\\n' +
+      'Value: ' + input.value + " , " +
+      'Type: ' + input.type + ' , ' +
+      'Placeholder: ' + input.placeholder + ' , ' +
+      'Disabled: ' + input.disabled + ' , ' +
+      'ID: ' + input.id + ' , ' +
       'Name: ' + input.name
     );
   }
 
-message(){
-  alert("I am click event ");
+message(val:string){
+  alert("I am click event "+val);
 }
 
 
@@ -97,7 +97,7 @@ this.userName = input.value ;
 }
 
 
-setUserName(event:MouseEvent){
+setUserName(){
 
 this.showUserName = '';
 alert("UserName Set Successful !!! ");

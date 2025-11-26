@@ -15,7 +15,7 @@ import { SignalTutorial } from './signal-tutorial/signal-tutorial';
 
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   standalone: true,
   imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial , ForLoopTutorial , SignalTutorial], 
   templateUrl: './app.html',

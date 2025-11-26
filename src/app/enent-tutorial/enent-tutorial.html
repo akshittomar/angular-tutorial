@@ -13,7 +13,7 @@
 </ul>
 
 
-<p  (click)="message()"  style="cursor: pointer;"  >enent-tutorial works!</p>
+<p  (click)="message('kkjkjkj')"  style="cursor: pointer;"  >enent-tutorial works!</p>
 
 <button  (click)="eventDetails($event)" name="Click me button"  style="cursor: pointer;"  >Click Me !</button>
 
@@ -50,7 +50,7 @@ style="margin-bottom: 5%;"
 
 <!-- Input field with onchange event -->
 <label for="changeField">Enter text with onchange:</label>
-<input id="changeField" type="text" (change)="onInputChangeFunc($event)"  />&nbsp;&nbsp;
+<input id="changeField" name="changeField" type="text" (change)="onInputChangeFunc($event)"  />&nbsp;&nbsp;
 <p>My Value is : {{inputChangeValue}}</p>&nbsp;&nbsp;
 <!-- change is same like onchange of react , change mai onInputChangeFunc tab trigger hoga jab enter key press karenge -->
 
@@ -64,7 +64,7 @@ style="margin-bottom: 5%;"
 <input type="text" id="userName"  placeholder="User Name Here..." (input)="storingName($event)"  value={{userName}} > <br>
 <p *ngIf="showUserName !== ''">User Name is {{showUserName}}</p>
 <p *ngIf="showUserName === ''">User Name</p>
-<button (click)="setUserName($event)" >Set UserName </button> &nbsp; 
+<button (click)="setUserName()" >Set UserName </button> &nbsp; 
 <button (click)="getUserName()" >Get UserName </button>
 
 <hr>
@@ -89,7 +89,7 @@ style="margin-bottom: 5%;"
 
 <!-- Accessing other properties -->
 <button (click)="showInputProps(cityInput)">Show All Properties</button>
-
+i 
 
 
 <h3>Common Angular Event Bindings and Their Types</h3>

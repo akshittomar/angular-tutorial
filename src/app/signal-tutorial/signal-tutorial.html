@@ -13,10 +13,18 @@
 <div>
     <span>There are 2 types of Signals : 1. Computed Signal 2 . Wrtitable Signal</span>
 </div><br>
-<p>1.Computed Signal : this is a signal that cannot be changed directly. It is derived from other signals or values.</p>
+<p>1.Computed Signal : this is a signal that cannot be changed directly (they don't have set or update property). It is derived from other signals or values.</p>
 <p>Computed Value depends on value of 'val() Signal' <small style="background-color: rgb(170, 170, 170);" >(Click on Update Signal Value button)</small>  : <strong>{{computedValue()}}</strong> </p>
 <p>2.Writable Signal :  this is a signal that can hold a number, string, or boolean value
  WritableSignal allows you to change the value of the signal directly without any dependency </p>
 <p>Different Values of a Writable Signal : {{differentValue()}}</p> &nbsp;&nbsp; <button (click)="updateDifferentValue()" >Change Datatype</button>
+<p>Note :  Computed signals in Angular should have a single, consistent type—they cannot hold multiple types like number | string | boolean at different times. </p>
+
+<p>Each effect only reacts to the signals used inside its own function.
+
+If you have an effect that only uses signal a, it will only run when a changes.
+If you have another effect that only uses signal b, it will only run when b changes.
+Signal a cannot trigger the effect for signal b, and vice versa.
+Each effect is independent and only tracks the signals it accesses.</p>
 
 

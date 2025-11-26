@@ -11,8 +11,8 @@ export class ForLoopTutorial {
  users: string[] = ["Anil", "Ajay", "Bhavesh", "Chandan", "Dinesh", "Eshwar", "Firoz", "Gopal", "Harish", "Iqbal", "Jagan"];
 
 students: { name: string, age: number , status : string   }[] = [
-    { name: "Anil", age: 20    , status:"married"  },
-    { name: "Ajay", age: 21   , status:"married"  },
+    { name: "Anil", age: 20    , status:"un-married"  },
+    { name: "Ajay", age: 21   , status:"un-married"  },
     { name: "Bhavesh", age: 22  , status:"married"   },
     { name: "Chandan", age: 23   , status:"married"  },
     { name: "Dinesh", age: 24   , status:"married"  },
