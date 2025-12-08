@@ -11,9 +11,9 @@ export class SwitchCaseTutorial {
   day:number = 0 ;
 
 handleDays(event:Event){
-  const target = (event.target as HTMLInputElement).value ; 
+  const dayValue = (event.target as HTMLInputElement).value ; 
 
-  this.day = parseInt(target);
+  this.day = parseInt(dayValue);
   console.log(this.day);
 
 }

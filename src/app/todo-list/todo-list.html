@@ -1,0 +1,98 @@
+<hr>
+<h2>Todo-list Application!</h2>
+
+<div style="display: flex;align-items: baseline;flex-wrap: nowrap;flex-direction: row;">
+
+    <div>
+        <h3>Todo List</h3>
+        <label for="todo">Enter Todo List Here</label><br>
+        <input name="todo" id="todo" type="text" (change)="todoTaskFunc($event)" placeholder="Add Your Todo Here" />
+    </div>
+
+
+    <div style="margin-left: 2%;" >
+        
+        <table style="border: 1px solid black;">
+
+
+
+
+            <th style="border: 1px solid black;">Task ⚡</th>
+            <th style="border: 1px solid black;">Action ⚒️</th>
+            <th style="border: 1px solid black;">Pending 🕐</th>
+            <th style="border: 1px solid black;">In Progress ⌛</th>
+            <th style="border: 1px solid black;">Completed ✅</th>
+
+
+
+            <tr>
+
+                <td>Hit The Gym </td>
+                <td> <button>Change</button> </td>
+                <td>&nbsp;&nbsp;✔️&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Cricket </td>
+                <td> <button>Change</button> </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;✔️&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Study </td>
+                <td> <button>Change</button> </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                 <td>&nbsp;&nbsp;✔️&nbsp;&nbsp;</td>
+
+            </tr>
+
+          
+
+
+
+            
+
+                
+            
+
+            @for( task of todoTask ; track  task ){
+                
+                 <tr>
+                    @if(task.status ==="todo")
+                    {
+                          <td>{{task.task}}</td>
+                <td> <button (click)="actionFunc($index)" >Change</button> </td>
+                <td>&nbsp;&nbsp;✔️&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    }
+                    @else if (task.status==="pending") {
+                          <td>{{task.task}} </td>
+                <td> <button (click)="actionFunc($index)" >Change</button> </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;✔️&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    }
+                    @else {
+                          <td>{{task.task}} </td>
+                <td> <button (click)="actionFunc($index)" >Change</button> </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;✔️&nbsp;&nbsp;</td>
+                    }
+                 </tr>
+            }
+
+        </table>
+    </div>
+
+</div>

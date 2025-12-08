@@ -42,7 +42,7 @@ mouseLeave(event:MouseEvent)
 {
   console.log("Mouse Leave Event ",event.type," on element: ", event.target);
 }
-mouseOver(event:MouseEvent)
+mouseOver(event:Event)
 {
   console.log("Mouse Over Event",event.type," on element: ", event.target);
 }
@@ -99,7 +99,7 @@ this.userName = input.value ;
 
 setUserName(){
 
-this.showUserName = '';
+this.showUserName = this.userName ; 
 alert("UserName Set Successful !!! ");
 console.log("UserName Set Successful !!! ",this.userName);
 
@@ -110,9 +110,14 @@ console.log("UserName Set Successful !!! ",this.userName);
 
 getUserName(){
 
-  
-this.showUserName = this.userName ; 
+  if(this.showUserName === ''){
+    alert("First Set User Name !!! ");
+    console.log("UserName is empty !!! ");
+    return;
+  }
+
 console.log("UserName is : ",this.showUserName);
+this.showUserName = '';
 }
 
 }

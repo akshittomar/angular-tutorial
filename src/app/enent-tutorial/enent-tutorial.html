@@ -13,9 +13,9 @@
 </ul>
 
 
-<p  (click)="message('kkjkjkj')"  style="cursor: pointer;"  >enent-tutorial works!</p>
+<p  (click)="message('kkjkjkj')"  style="cursor: pointer;"  > pin krde</p>
 
-<button  (click)="eventDetails($event)" name="Click me button"  style="cursor: pointer;"  >Click Me !</button>
+<button  (click)="eventDetails($event)"  id="pepsi" name="Click me button"  style="cursor: pointer;"  >Click Me To See Event Object In Console !</button>
 
 <div style="display: flex; flex-direction: row; justify-content: space-evenly ; margin-top: 5%; margin-right: 5%;" >
 
@@ -61,9 +61,9 @@ style="margin-bottom: 5%;"
 
 <h3>Getter and Setter in Angular</h3>
 <label for="userName"  >Enter User Name:</label>
-<input type="text" id="userName"  placeholder="User Name Here..." (input)="storingName($event)"  value={{userName}} > <br>
-<p *ngIf="showUserName !== ''">User Name is {{showUserName}}</p>
-<p *ngIf="showUserName === ''">User Name</p>
+<input type="text" id="userName"  placeholder="User Name Here..." (input)="storingName($event)"   > <br>
+<p *ngIf="showUserName === ''">User Name is {{userName}}</p>
+<p *ngIf="showUserName !== ''">User Name</p>
 <button (click)="setUserName()" >Set UserName </button> &nbsp; 
 <button (click)="getUserName()" >Get UserName </button>
 
@@ -82,14 +82,14 @@ style="margin-bottom: 5%;"
 <p>Here’s a full example using Angular template reference variables (#) with an <code><input></code>. You’ll see how to access different properties and use them in your component:</p>
 
 <label for="cityInput">Enter City:</label>
-<input #cityInput type="text" id="cityInput" placeholder="City Name" />
+<input #cityInput type="text" id="cityInpooo" placeholder="City Name" />
 
 <!-- Accessing value property -->
 <button (click)="showCity(cityInput.value)">Show Value</button>
 
 <!-- Accessing other properties -->
 <button (click)="showInputProps(cityInput)">Show All Properties</button>
-i 
+
 
 
 <h3>Common Angular Event Bindings and Their Types</h3>

@@ -27,4 +27,28 @@ If you have another effect that only uses signal b, it will only run when b chan
 Signal a cannot trigger the effect for signal b, and vice versa.
 Each effect is independent and only tracks the signals it accesses.</p>
 
+<!-- 
+Explanation:
 
+An effect tracks every signal you read inside it.
+If the effect writes to (updates) any of those same signals, the update will trigger the effect again.
+If the update changes the signal value each time (unconditionally), the effect will keep re-running — this can lead to an infinite loop / runaway updates.
+If the update is conditional and eventually stops changing the value, the effect will re-run only until the condition is false and then stop.
+
+
+effect(() => {
+  // reads this.val() then writes -> triggers effect again immediately
+  this.val.set(this.val() + 1);
+});
+
+
+effect(() => {
+  const v = this.val();
+  if (v < 3) {             // update only while condition true
+    this.val.set(v + 1);
+  }
+});
+
+
+
+-->
