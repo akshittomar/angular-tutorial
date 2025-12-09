@@ -1,0 +1,10 @@
+/* ng-model-tutorial.css */
+input {
+  margin: 10px 0;
+  padding: 8px;
+  font-size: 16px;
+}
+
+p {
+  font-weight: bold;
+}

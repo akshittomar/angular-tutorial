@@ -1,1 +1,19 @@
-<p>todo-app works!</p>
+<hr/>
+<h3>Todo App From Tutorial</h3>
+<div>
+    <label for="task" >Enter you Task here:</label><br/>
+    <input  type="text" name=""task [(ngModel)]="task" />&nbsp;&nbsp;<button class="" type="text" (click)="addTask(task)" >Add Task</button>   <br/>
+    <br/>
+    @for(task of todoList ; track task){
+        <ul style="display: flex;justify-content: space-between;" >
+            <li>{{$index+1}}</li>
+            <li>{{task.task}}</li>
+            <li>{{task.priority}} Priority</li>
+            <li><button class="" (click)="changePriority($index)" >Change Priority</button></li>
+            <li><button class="" (click)="removeTask(task.task)" >Remove Task</button></li>
+
+        </ul>
+    }
+
+
+</div>

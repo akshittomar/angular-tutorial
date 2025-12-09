@@ -13,13 +13,15 @@ import { ForLoopTutorial } from './for-loop-tutorial/for-loop-tutorial';
 import { SignalTutorial } from './signal-tutorial/signal-tutorial';
 import {ContextualVar } from './contextual-var/contextual-var';
 import { TodoList } from './todo-list/todo-list';
+import { TodoApp } from './todo-app/todo-app';
+import { NgModelTutorial } from './ng-model-tutorial/ng-model-tutorial';
 
 
 
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial , ForLoopTutorial , SignalTutorial , ContextualVar, TodoList], 
+  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial , ForLoopTutorial , SignalTutorial , ContextualVar, TodoList , TodoApp ,NgModelTutorial ], 
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

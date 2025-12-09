@@ -1,0 +1,24 @@
+<!-- ng-model-tutorial.html -->
+ <hr/>
+<h3>Angular ngModel Tutorial</h3>
+
+<!-- Notes about ngModel -->
+<p><strong>What is ngModel?</strong></p>
+<p>ngModel is a directive in Angular that enables two-way data binding between the template (view) and the component (model). It automatically synchronizes the value of an input element with a property in the component class.</p>
+<p><strong>How it works:</strong></p>
+<ul>
+  <li>The [(ngModel)] syntax is called "banana in a box" and represents two-way binding.</li>
+  <li>When the user types in the input, the component property updates.</li>
+  <li>When the component property changes, the input value updates.</li>
+  <li>This eliminates the need for manual event handling for simple form inputs.</li>
+</ul>
+
+<!-- Example of ngModel usage -->
+<label for="userInput">Enter some text:</label>
+<input id="userInput" type="text" [(ngModel)]="userInput" placeholder="Type here...">
+
+<p><strong>Current value:</strong> {{ userInput }}</p>
+
+<!-- Additional notes -->
+<p><em>Note: ngModel requires FormsModule to be imported in the component's imports array.</em></p>
+<p><em>Example usage: [(ngModel)]="propertyName" on input, textarea, or select elements.</em></p>
