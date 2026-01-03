@@ -1,0 +1,70 @@
+<hr/>
+<h2>Angular Directives — Definition & Theory</h2>
+
+<p>
+Directives are classes in Angular that add behavior to elements in the DOM. They allow developers to encapsulate DOM manipulation, conditional rendering, and dynamic styling in a declarative way using templates. Directives are a core feature of Angular for extending HTML with custom behavior and for composing reusable UI logic.
+</p>
+
+<h3>Primary Types of Directives</h3>
+
+<p>
+1. Structural Directives: These directives change the structure of the DOM by adding, removing, or manipulating elements. They are used to control which elements are rendered based on application state or data. e.g: ngIf , ngFor , ngSwitch.
+</p>
+
+<p>
+2. Attribute Directives: Attribute directives modify the appearance or behavior of an existing element, component, or another directive. They do not add or remove DOM elements but change properties, styles, classes, or behavior of the host element. e.g: ngClass , ngStyle.
+</p>
+
+<p>
+3. Component Directives: Components are a specialized kind of directive with their own template. A component combines an HTML template with a class that manages its data and behavior; components are the primary building blocks of Angular applications. e.g: Any Angular Component that starts with &#64;Component decorator.
+</p>
+
+<h4>NgIf Example</h4>
+<p *ngIf="value"  >I will be visible if ngIf is true</p>
+
+<h4>..............Ng For Example..................</h4>
+
+<ul>
+    <li *ngFor="let x of student" >{{x}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let stud of studentData"  >
+       {{stud.name}}, {{stud.age}},{{stud.email}},&nbsp; Subjects:
+       <span *ngFor="let sub of stud.subjects" >{{sub}}&nbsp;</span>
+
+    </li>
+</ul>
+
+<h4>.........Detail......If.....Else.....Block......Example......</h4>
+
+
+<div *ngIf="isLoggedIn ; else logOut" > Sign Out <br/>
+    <button style="color: blue;"  (click)="updateLogin()" >Log Out </button>
+</div>
+<ng-template #logOut> Welcome To Our Website , Please Login!!<br/>
+    <button style="color: blue;" (click)="updateLogin()" >Log In </button>
+</ng-template>
+
+
+
+<h4>.........Switch Case Example...........</h4>
+
+<input type="text"   (change)="updateColor($event)" >
+
+
+
+<div [ngSwitch]="color" >
+    <div *ngSwitchCase="'red'" class="red" >Red</div>
+    <div *ngSwitchCase="'blue'" class="blue" >Blue</div>
+    <div *ngSwitchCase="'green'" class="green" >Green</div>
+    <div *ngSwitchCase="'pink'" class="pink" >Pink</div>
+    <div *ngSwitchDefault class="black" >No Match Found</div>
+    
+    
+    
+</div>
+
+
+
+

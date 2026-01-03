@@ -1,0 +1,9 @@
+.active{
+    
+    background-color: rgb(255, 230, 132);
+}
+.nav{
+        display: flex;
+    place-content: space-around;
+    justify-content: space-around;
+}

@@ -8,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class DynamicStyle {
 
+  color1="blue";
+  color2="grey";
+  color=this.color1;
+
+
+
+  changeColor(){
+    if(this.color===this.color1)
+      this.color=this.color2;
+    else
+      this.color=this.color1;
+  }
+
+
 }

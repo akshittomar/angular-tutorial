@@ -2,7 +2,7 @@
 <h3>Todo App From Tutorial</h3>
 <div>
     <label for="task" >Enter you Task here:</label><br/>
-    <input  type="text" name=""task [(ngModel)]="task" />&nbsp;&nbsp;<button class="" type="text" (click)="addTask(task)" >Add Task</button>   <br/>
+    <input  type="text"  [(ngModel)]="task" />&nbsp;&nbsp;<button class="" type="text" (click)="addTask(task)" >Add Task</button>   <br/>
     <br/>
     @for(task of todoList ; track task){
         <ul style="display: flex;justify-content: space-between;" >
