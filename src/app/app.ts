@@ -18,6 +18,7 @@ import { NgModelTutorial } from './ng-model-tutorial/ng-model-tutorial';
 import { DynamicStyle } from './dynamic-style/dynamic-style';
 import {Directive} from './directive/directive';
 import { Navbar } from './navbar/navbar';
+import { DynamicRouteHome } from './dynamic-route-home/dynamic-route-home';
 
 
 
@@ -26,7 +27,7 @@ import { Navbar } from './navbar/navbar';
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial , ForLoopTutorial , SignalTutorial , ContextualVar, TodoList , TodoApp ,NgModelTutorial,DynamicStyle ,Directive , Navbar ], 
+  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial , ForLoopTutorial , SignalTutorial , ContextualVar, TodoList , TodoApp ,NgModelTutorial,DynamicStyle ,Directive , Navbar , DynamicRouteHome ], 
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

@@ -1,0 +1,27 @@
+.user-link{
+  color: #0b5ed7; /* link blue */
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+.user-link:hover{
+  text-decoration: underline;
+}
+.user-link::after{
+  content: '';
+  display: inline-block;
+  margin-left: 6px;
+  transform: translateX(-4px);
+  opacity: 0;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+.user-link:hover::after{
+  content: '\2192'; /* right arrow */
+  transform: translateX(0);
+  opacity: 1;
+}
+/* accessibility focus styles */
+.user-link:focus{
+  outline: 2px dashed #475569;
+  outline-offset: 2px;
+}

@@ -1,0 +1,17 @@
+<h3>Dynamic Routes</h3>
+<p>🧠 Dynamic Routing kya hota hai? <br>
+
+URL ke saath data bhejna aur us data ke basis pe page ka content change hona = Dynamic Routing.<br>
+
+Example:<br>
+
+/profile?userId=2&username=Rahul&age=24
+
+Same page (ProfileComponent)
+lekin user alag-alag.</p><br>
+<li *ngFor="let user of users" >
+    <a class="user-link" (click)="openProfile(user)">{{user.userName}}</a>
+
+</li>
+
+<hr>

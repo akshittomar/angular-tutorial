@@ -1,1 +1,20 @@
 <p>home works!</p>
+
+<a [routerLink]="['/profile', { name: 'Akshit Tomar' }]">
+  Go to Profile Page
+</a>
+
+<p>
+  <strong>Note:</strong>
+  Use an <em>absolute</em> link with a leading '/' —
+  e.g.
+  <code>['/profile', {{ '{' }}...{{ '}' }}]</code>
+  navigates to
+  <code>/profile</code>
+  from anywhere.
+  Without the leading '/', the link is <em>relative</em> —
+  e.g.
+  <code>['profile']</code>
+  resolves from the current route
+  (from <code>/home</code> it becomes <code>/home/profile</code>).
+</p>
