@@ -1,1 +1,27 @@
-<p>forms works!</p>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Angular Forms: Template-driven vs Reactive</title> <style> body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.6; background-color: #f9f9f9; color: #333; } h1, h2 { color: #007acc; } table { width: 100%; border-collapse: collapse; margin-top: 1rem; } th, td { border: 1px solid #ccc; padding: 0.75rem; text-align: left; } th { background-color: #e0f0ff; } ul { margin-top: 0.5rem; } </style> </head> <body> <h1>Angular Forms: Template-driven vs Reactive</h1>
+
+<h2>Template-driven Forms</h2> <ul> <li>Think of these as “HTML-first” forms.</li> <li>You design the form mostly in the template (HTML), and Angular automatically wires up the logic behind the scenes.</li> <li>They feel easy and quick for small forms (like a login form with just email + password).</li> <li>The template carries most of the responsibility, so your TypeScript file stays light.</li> </ul>
+
+<h2>Reactive Forms</h2> <ul> <li>These are “TypeScript-first” forms.</li> <li>You build the form structure in your TypeScript file, then connect it to the template.</li> <li>They give you more control: you can track changes, validate in detail, and react to user input in real time.</li> <li>Perfect for complex forms (like a multi-step checkout with dynamic rules).</li> </ul>
+
+<h2>Key Differences</h2> <table> <tr> <th>Aspect</th> <th>Template-driven</th> <th>Reactive</th> </tr> <tr> <td>Approach</td> <td>HTML-first</td> <td>TypeScript-first</td> </tr> <tr> <td>Form Setup</td> <td>Defined in template</td> <td>Defined in component class</td> </tr> <tr> <td>Control</td> <td>Limited</td> <td>Full control</td> </tr> <tr> <td>Validation</td> <td>Basic, template-based</td> <td>Advanced, programmatic</td> </tr> <tr> <td>Best for</td> <td>Simple forms</td> <td>Complex forms</td> </tr> </table>
+
+<h2>Scenario Example</h2> <p>Imagine you’re building a shopping site:</p> <ul> <li><strong>Login form</strong> (2 fields: email + password) → Use <em>template-driven</em>. It’s quick, simple, and doesn’t need heavy logic.</li> <li><strong>Checkout form</strong> (address, payment, coupon, dynamic shipping options, live validation) → Use <em>reactive</em>. You need fine-grained control, dynamic updates, and complex validation.</li> </ul>
+
+<h2>Summary</h2> <ul> <li><strong>Template-driven</strong> = quick & simple</li> <li><strong>Reactive</strong> = powerful & complex</li> </ul> </body> </html>
+
+
+
+<p>.............................Basic FReactive Form Tutorial.........................................</p>
+<form  action="/"   method="post" >
+
+    <label for="email" >Enter Email </label>
+    <input type="text" name="email" id="email" placeholder="Enter email here..." [formControl]="email" /><br>
+    <br>
+    <label for="pass" >Password  </label>
+    <input type="text" name="pass" id="pass" placeholder="Enter Password......" [formControl]="password" /><br>
+
+
+    <button type="button" (click)="showValue()" >Show Value</button>
+
+</form>
