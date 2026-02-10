@@ -64,6 +64,9 @@
 <app-child-emit  (out)="getDataFromChild($event)" ></app-child-emit><!-- This is 21-->
 <app-angular-lifecycle #lifeCycleChild *ngIf="dataVal!=6" [parentData]="dataVal" ></app-angular-lifecycle><!-- This is 22 -->
 &nbsp;<br><br>
-<button style="color: beige;" (click)="changeData()" ><i style="color: black;">Click To Trigger Change In Child</i></button>
+<button style="color: beige;" (click)="changeData()" ><i style="color: black;">Click To Trigger Change In Child</i></button><!-- This is 23 -->
+<app-service-tutorial></app-service-tutorial> <!-- This is 24 -->
+<h3>...................API CALLING BEGINS.......................</h3>
+
 
 

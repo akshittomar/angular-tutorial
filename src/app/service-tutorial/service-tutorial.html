@@ -1,1 +1,177 @@
-<p>service-tutorial works!</p>
+<!-- <hr>
+<small style="color: rgb(86, 86, 10);" >All Product Details are coming from <i>"Services"</i></small><br>
+@for(prod of product; track prod){
+<span>{{prod.name}},&nbsp;{{prod.discount}},&nbsp;{{prod.cost}}</span><br>
+} -->
+
+<!-- 
+<hr>
+<small style="color: rgb(86, 86, 10);">
+  All Product Details are coming from <i>"Services"</i>
+</small>
+<br>
+
+@for(prod of product; track prod){
+  <span>{{prod.name}},&nbsp;{{prod.discount}},&nbsp;{{prod.cost}}</span><br>
+}
+
+<hr>
+
+<p>
+  <strong>Injectable kya hota hai?</strong><br>
+  <span>
+    <strong>&#64;Injectable()</strong> Angular ko batata hai ki ye class ek
+    <i>service</i> hai aur isko components ya other services mein
+    <strong>inject</strong> kiya ja sakta hai.
+  </span>
+</p>
+
+<p>
+  <strong>providedIn ka matlab:</strong><br>
+  <span>
+    Jab hum <i>providedIn: 'root'</i> likhte hain, to service
+    <strong>poori app ke liye ek hi baar</strong> banti hai aur sab components
+    usi instance ko use karte hain.
+  </span>
+</p>
+
+<p>
+  <strong>providers kya hota hai?</strong><br>
+  <span>
+    <i>providers</i> array mein service dene ka matlab hota hai ki
+    <strong>sirf us component</strong> ke liye service ka naya instance banega.
+    Baaki components us service ko share nahi karenge.
+  </span>
+</p>
+
+<p>
+  <strong>providedIn vs providers:</strong><br>
+  <span>
+    <strong>providedIn: 'root'</strong> → service poori app mein share hoti hai.<br>
+    <strong>providers</strong> → service sirf ek component/module ke liye hoti hai.
+  </span>
+</p>
+
+<p>
+  <strong>Real projects mein kya use hota hai?</strong><br>
+  <span>
+    Mostly projects mein <i>providedIn: 'root'</i> use hota hai kyunki ye
+    clean, simple aur best practice hai.
+  </span>
+</p> -->
+
+
+<hr>
+<small style="color: rgb(86, 86, 10);">
+  All Product Details are coming from <i>"Services"</i>
+</small>
+<br>
+
+@for(prod of product; track prod){
+  <span>{{prod.name}},&nbsp;{{prod.discount}},&nbsp;{{prod.cost}}</span><br>
+}
+
+..................................
+
+<p>
+  <strong>Injectable kya hota hai?</strong><br>
+  <span>
+    <strong>&#64;Injectable()</strong> Angular ko batata hai ki ye class ek
+    <i>service</i> hai aur isko components ya other services mein
+    <strong>inject</strong> kiya ja sakta hai.
+  </span>
+</p>
+
+<p>
+  <strong>providedIn ka matlab:</strong><br>
+  <span>
+    Jab hum <i>providedIn: 'root'</i> likhte hain, to service
+    <strong>poori app ke liye ek hi baar</strong> banti hai aur sab components
+    usi instance ko use karte hain.
+  </span>
+</p>
+
+<p>
+  <strong>providers kya hota hai?</strong><br>
+  <span>
+    <i>providers</i> array mein service dene ka matlab hota hai ki
+    <strong>sirf us component</strong> ke liye service ka naya instance banega.
+    Baaki components us service ko share nahi karenge.
+  </span>
+</p>
+
+<p>
+  <strong>providedIn vs providers:</strong><br>
+  <span>
+    <strong>providedIn: 'root'</strong> → service poori app mein share hoti hai.<br>
+    <strong>providers</strong> → service sirf ek component/module ke liye hoti hai.
+  </span>
+</p>
+
+<p>
+  <strong>Real projects mein kya use hota hai?</strong><br>
+  <span>
+    Mostly projects mein <i>providedIn: 'root'</i> use hota hai kyunki ye
+    clean, simple aur best practice hai.
+  </span>
+</p>
+
+.........................................
+
+<p>
+  <strong>Service ko use kaise karein? (Step-by-step)</strong>
+</p>
+
+<p>
+  <strong>Step 1:</strong>
+  <span>
+    Service file banao aur usme logic likho (jaise Product service).
+  </span>
+</p>
+
+<p>
+  <strong>Step 2:</strong>
+  <span>
+    Component file mein service ko <strong>constructor</strong> ke through inject karo.
+  </span>
+</p>
+
+<p>
+  <strong>Code Example (Component - TypeScript):</strong><br>
+  <span>
+    <code>
+      constructor(productService: Product) &#123;<br>
+      &nbsp;&nbsp;this.product = productService.getProducts();<br>
+      &#125;
+    </code>
+  </span>
+</p>
+
+<p>
+  <strong>Step 3:</strong>
+  <span>
+    Ab component ke variable ko template mein use karo.
+  </span>
+</p>
+
+<p>
+  <strong>Code Example (Template - HTML):</strong><br>
+  <span>
+    <code>
+      &#64;for(prod of product; track prod)&#123;<br>
+      &nbsp;&nbsp;&#123; &#123; prod.name &#125;&#125; ,<br>
+      &nbsp;&nbsp;&#123; &#123; prod.discount &#125;&#125; ,<br>
+      &nbsp;&nbsp;&#123; &#123; prod.cost &#125;&#125;<br>
+      &#125;
+    </code>
+  </span>
+</p>
+
+<p>
+  <strong>One-line summary:</strong><br>
+  <span>
+    Service mein logic/data hota hai, component usko
+    <strong>constructor ke through inject</strong> karta hai,
+    aur template us data ko display karta hai.
+  </span>
+</p>

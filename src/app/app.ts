@@ -24,6 +24,7 @@ import { ChildComponent } from './child-component/child-component';
 import { ChildEmit } from './child-emit/child-emit';
 import { AngularLifecycle } from './angular-lifecycle/angular-lifecycle';
 import { Product } from './services/product';
+import { ServiceTutorial } from './service-tutorial/service-tutorial';
 
 
 
@@ -31,7 +32,7 @@ import { Product } from './services/product';
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial , ForLoopTutorial , SignalTutorial , ContextualVar, TodoList , TodoApp ,NgModelTutorial,DynamicStyle ,Directive , Navbar , DynamicRouteHome , Forms , ChildComponent , ChildEmit , AngularLifecycle], 
+  imports: [CommonModule, TestPipe,Login, TestComponent , VariableDecleration , Counter , EnentTutorial , AppStyleTutorial , IfElseTutorial, SwitchCaseTutorial , ForLoopTutorial , SignalTutorial , ContextualVar, TodoList , TodoApp ,NgModelTutorial,DynamicStyle ,Directive , Navbar , DynamicRouteHome , Forms , ChildComponent , ChildEmit , AngularLifecycle , ServiceTutorial], 
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
