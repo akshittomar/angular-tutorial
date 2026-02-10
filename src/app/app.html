@@ -1,7 +1,33 @@
 <h1>Hello World Namaste ji Jai Siya Ram {{title}}</h1>
 <!-- You can use the built-in 'uppercase' pipe directly in string interpolation like this.
      In standalone components, make sure 'CommonModule' is imported in the component's imports array. -->
-<h2>{{name | uppercase }}</h2>
+---------Some Basic Pipes Demonstration------------
+     <h5>{{name | uppercase }}</h5><br>
+     <h5>{{name | lowercase }}</h5><br>
+     <h5>{{name | titlecase }}</h5><br>
+     -----FOR DATES PIPE DEMONSTRATION--------------
+     <h5>Original Date: {{ date }}</h5>
+     <h5>Short Date: {{ date | date:'short' }}</h5>
+     <h5>Medium Date: {{ date | date:'medium' }}</h5>
+     <h5>Short DateTime: {{ date | date:'shortDate' }}</h5>
+     <h5>Medium DateTime: {{ date | date:'mediumDate' }}</h5>
+     <h5>Full DateTime: {{ date | date:'fullDate' }}</h5>
+     <h5>Full Date: {{ date | date:'full' }}</h5>
+     -----FOR NUMBER PIPE DEMONSTRATION--------------  
+     <h5>Original Number: {{ 1234567.89 }}</h5>
+     <h5>Number with 1 digit after decimal: {{ 1234567.89 | number:'1.1-1' }}</h5>
+     <h5>Number with 2 digits after decimal: {{ 1234567.89 | number:'1.2-2' }}</h5>
+     <h5>Number with 3 digits after decimal: {{ 1234567.89 | number:'1.3-3' }}</h5>
+     -----FOR CURRENCY PIPE DEMONSTRATION--------------          
+     <h5>Original Number: {{ 1234567.89 }}</h5>
+     <h5>Currency in USD: {{ 1234567.89 | currency:'USD' }}</h5>
+     <h5>Currency in EUR: {{ 1234567.89 | currency:'EUR' }}</h5>
+     <h5>Currency in GBP: {{ 1234567.89 | currency:'GBP' }}</h5>
+     <h5>Currency in INR: {{ 1234567.89 | currency:'INR' }}</h5>
+     ---------------MORE THAN 1 PIPE AT ONCE--------------------------------
+     <h5>Uppercase and then Titlecase: {{ name | uppercase | titlecase }}</h5>
+
+
 <h3>{{getName()}}</h3>
 
 <!-- Demonstrating usage of the custom pipe 'testPipe' -->
@@ -26,5 +52,18 @@
 <app-directive></app-directive> <!-- This is 16-->
 <app-navbar></app-navbar>  <!-- This is 17-->
 <app-dynamic-route-home></app-dynamic-route-home> <!-- This is 18-->
-<app-forms></app-forms> <!-- This is 19-->
+<app-forms></app-forms> <hr><!-- This is 19-->
+--------------Child Component Demo-----------------
+<!--@for( name of namesArr; track name;){ 
+     <app-child-component [name]="name" ></app-child-component>
+
+}-->
+@for( article of articels ; track article  ){   <!-- This is 20-->
+<app-child-component [article]="article" ></app-child-component>
+}
+<app-child-emit  (out)="getDataFromChild($event)" ></app-child-emit><!-- This is 21-->
+<app-angular-lifecycle #lifeCycleChild *ngIf="dataVal!=6" [parentData]="dataVal" ></app-angular-lifecycle><!-- This is 22 -->
+&nbsp;<br><br>
+<button style="color: beige;" (click)="changeData()" ><i style="color: black;">Click To Trigger Change In Child</i></button>
+
 

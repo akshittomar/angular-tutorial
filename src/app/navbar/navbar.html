@@ -7,9 +7,30 @@
 
 </nav>
 <router-outlet/><br>
+
+<!-- 
+========== SHORT NOTES: PUBLIC FOLDER & STATIC ASSETS ==========
+1. PUBLIC FOLDER: Anything in public/ folder is accessible as a URL route
+   - public/notes1.png → http://localhost:4200/notes1.png
+   - public/Asset/image.png → http://localhost:4200/Asset/image.png
+
+2. THE "/" PATH: Starts from the website root
+   - src="/notes1.png" means "get notes1.png from root"
+   - src="notes1.png" means "get relative to current file"
+
+3. WHY USE PUBLIC FOLDER?
+   - src/ folder: Compiled/bundled source code (NOT served as static assets)
+   - public/ folder: Static files served directly WITHOUT compilation (✓ accessible)
+
+4. EXAMPLE COMPARISON:
+   ✓ public/notes1.png → http://localhost:4200/notes1.png (WORKS)
+   ✗ src/app/Asset/notes1.png → NOT accessible (inside source code)
+========================================================
+-->
+
 <!-- add images below from the assets folder -->
  <p>..............Short Summary About Data Paasage In Routing...............</p><br>
-<img src="../Asset/notes1.png" alt="Notes 1" width="100" height="100"><br>
-<img src="../Asset/notes2.png" alt="Notes 2" width="100" height="100">
+<img src="/notes1.png" alt="Notes 1" width="80%" height="80%"><br>
+<img src="/notes2.png" alt="Notes 2" width="80%" height="80%"><br>
 <hr>
 

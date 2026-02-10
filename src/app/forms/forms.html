@@ -1,27 +1,230 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Angular Forms: Template-driven vs Reactive</title> <style> body { font-family: Arial, sans-serif; margin: 2rem; line-height: 1.6; background-color: #f9f9f9; color: #333; } h1, h2 { color: #007acc; } table { width: 100%; border-collapse: collapse; margin-top: 1rem; } th, td { border: 1px solid #ccc; padding: 0.75rem; text-align: left; } th { background-color: #e0f0ff; } ul { margin-top: 0.5rem; } </style> </head> <body> <h1>Angular Forms: Template-driven vs Reactive</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Template-driven Forms</h2> <ul> <li>Think of these as “HTML-first” forms.</li> <li>You design the form mostly in the template (HTML), and Angular automatically wires up the logic behind the scenes.</li> <li>They feel easy and quick for small forms (like a login form with just email + password).</li> <li>The template carries most of the responsibility, so your TypeScript file stays light.</li> </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Forms: Template-driven vs Reactive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
 
-<h2>Reactive Forms</h2> <ul> <li>These are “TypeScript-first” forms.</li> <li>You build the form structure in your TypeScript file, then connect it to the template.</li> <li>They give you more control: you can track changes, validate in detail, and react to user input in real time.</li> <li>Perfect for complex forms (like a multi-step checkout with dynamic rules).</li> </ul>
+        h1,
+        h2 {
+            color: #007acc;
+        }
 
-<h2>Key Differences</h2> <table> <tr> <th>Aspect</th> <th>Template-driven</th> <th>Reactive</th> </tr> <tr> <td>Approach</td> <td>HTML-first</td> <td>TypeScript-first</td> </tr> <tr> <td>Form Setup</td> <td>Defined in template</td> <td>Defined in component class</td> </tr> <tr> <td>Control</td> <td>Limited</td> <td>Full control</td> </tr> <tr> <td>Validation</td> <td>Basic, template-based</td> <td>Advanced, programmatic</td> </tr> <tr> <td>Best for</td> <td>Simple forms</td> <td>Complex forms</td> </tr> </table>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
 
-<h2>Scenario Example</h2> <p>Imagine you’re building a shopping site:</p> <ul> <li><strong>Login form</strong> (2 fields: email + password) → Use <em>template-driven</em>. It’s quick, simple, and doesn’t need heavy logic.</li> <li><strong>Checkout form</strong> (address, payment, coupon, dynamic shipping options, live validation) → Use <em>reactive</em>. You need fine-grained control, dynamic updates, and complex validation.</li> </ul>
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 0.75rem;
+            text-align: left;
+        }
 
-<h2>Summary</h2> <ul> <li><strong>Template-driven</strong> = quick & simple</li> <li><strong>Reactive</strong> = powerful & complex</li> </ul> </body> </html>
+        th {
+            background-color: #e0f0ff;
+        }
+
+        ul {
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Angular Forms: Template-driven vs Reactive</h1>
+
+    <h2>Template-driven Forms</h2>
+    <ul>
+        <li>Think of these as “HTML-first” forms.</li>
+        <li>You design the form mostly in the template (HTML), and Angular automatically wires up the logic behind the
+            scenes.</li>
+        <li>They feel easy and quick for small forms (like a login form with just email + password).</li>
+        <li>The template carries most of the responsibility, so your TypeScript file stays light.</li>
+    </ul>
+
+    <h2>Reactive Forms</h2>
+    <ul>
+        <li>These are “TypeScript-first” forms.</li>
+        <li>You build the form structure in your TypeScript file, then connect it to the template.</li>
+        <li>They give you more control: you can track changes, validate in detail, and react to user input in real time.
+        </li>
+        <li>Perfect for complex forms (like a multi-step checkout with dynamic rules).</li>
+    </ul>
+
+    <h2>Key Differences</h2>
+    <table>
+        <tr>
+            <th>Aspect</th>
+            <th>Template-driven</th>
+            <th>Reactive</th>
+        </tr>
+        <tr>
+            <td>Approach</td>
+            <td>HTML-first</td>
+            <td>TypeScript-first</td>
+        </tr>
+        <tr>
+            <td>Form Setup</td>
+            <td>Defined in template</td>
+            <td>Defined in component class</td>
+        </tr>
+        <tr>
+            <td>Control</td>
+            <td>Limited</td>
+            <td>Full control</td>
+        </tr>
+        <tr>
+            <td>Validation</td>
+            <td>Basic, template-based</td>
+            <td>Advanced, programmatic</td>
+        </tr>
+        <tr>
+            <td>Best for</td>
+            <td>Simple forms</td>
+            <td>Complex forms</td>
+        </tr>
+    </table>
+
+    <h2>Scenario Example</h2>
+    <p>Imagine you’re building a shopping site:</p>
+    <ul>
+        <li><strong>Login form</strong> (2 fields: email + password) → Use <em>template-driven</em>. It’s quick, simple,
+            and doesn’t need heavy logic.</li>
+        <li><strong>Checkout form</strong> (address, payment, coupon, dynamic shipping options, live validation) → Use
+            <em>reactive</em>. You need fine-grained control, dynamic updates, and complex validation.</li>
+    </ul>
+
+    <h2>Summary</h2>
+    <ul>
+        <li><strong>Template-driven</strong> = quick & simple</li>
+        <li><strong>Reactive</strong> = powerful & complex</li>
+    </ul>
+</body>
+
+</html>
 
 
 
-<p>.............................Basic FReactive Form Tutorial.........................................</p>
-<form  action="/"   method="post" >
+<p>.............................Basic Reactive Form Tutorial.........................................</p>
+<form action="/" method="post">
 
-    <label for="email" >Enter Email </label>
+    <label for="email">Enter Email </label>
     <input type="text" name="email" id="email" placeholder="Enter email here..." [formControl]="email" /><br>
     <br>
-    <label for="pass" >Password  </label>
-    <input type="text" name="pass" id="pass" placeholder="Enter Password......" [formControl]="password" /><br>
+    <label for="pass">Password </label>
+    <input type="text" name="pass" id="pass" placeholder="Enter Password......" [formControl]="password" /><br><br>
 
 
-    <button type="button" (click)="showValue()" >Show Value</button>
+    <button type="button" (click)="showValue()">Show Value</button><br>
+
+</form><br>
+
+<p>.............................Basic Form Group Tutorial.........................................</p>
+
+<form [formGroup]="profileForm" method="get" action="/" (ngSubmit)="onSubmit()">
+    Enter Name <br>
+    <input type="text" name="name" formControlName="name" placeholder="Enter Name......"><br><br>
+    Enter Pass <br>
+    <input type="text" name="pass" formControlName="pass" placeholder="Enter Password......"><br><br>
+    Enter Email <br>
+    <input type="text" name="email" formControlName="email" placeholder="Enter Email......"><br><br>
+    <button>Submit</button><br><small style="color: grey;">Check console for submitted values</small>
+
+</form><br>
+Email is this : <br>
+{{this.profileForm.value.email}}
+
+
+<p>.............................Basic Form Group Validation Tutorial.........................................</p>
+
+<form [formGroup]="profileFormValidation" method="get" action="/" (ngSubmit)="onSubmitValidation()">
+    Enter Name <br>
+    <input type="text" name="name" formControlName="name" placeholder="Enter Name......">
+    <small style="color:red;" *ngIf="name?.hasError('required') && name?.touched ">*</small><br><br>
+
+    Enter Pass <br>
+    <input type="text" name="pass" formControlName="pass" placeholder="Enter Password......">
+    <small style="color:red;" *ngIf="pass?.hasError('required') || pass?.hasError('minlength') ">*</small>
+
+    <small *ngIf="pass?.hasError('minlength') && (pass?.touched || pass?.dirty)" style="color:red">
+        Password must be at least 8 characters
+        (currently {{ pass?.value?.length || 0 }})
+    </small><br><br> Enter Email <br>
+    <input type="text" name="email" formControlName="email" placeholder="Enter Email......"><br><br>
+    <small style="color:red;" *ngIf=" mail?.invalid && mail?.touched ">(Invalid Mail)</small><br><br>
+    <button type="submit"
+        [disabled]="pass?.hasError('required') || mail?.hasError('required') || name?.hasError('required') ">Submit</button><br><small
+        style="color: grey;">Check console for submitted values</small>
+
+</form><br>
+Email is this : <br>
+{{this.profileFormValidation.value.email}}
+
+<p>.............................Basic Template Form Tutorial.........................................</p>
+
+<form #template="ngForm" (ngSubmit)="templateSubmit(template.value)">
+    Enter Username <br><br>
+    <input type="text" required name="userName" #u="ngModel" ngModel placeholder="Enter UserName....."><br><br>
+    Enter Age<br><br>
+    <input type="number" name="age" ngModel placeholder="Enter Age..."> <br><br>
+    <select ngModel name="country">Country
+        <option value="India">India</option>
+        <option value="Russia">Russia</option>
+        <option value="Japan">Japan</option>
+        <option value="Germany">Germany</option>
+    </select><br><br>
+    <input type="range" name="range" min="0" max="20" ngModel>
+    <br>
+    <button type="submit" [disabled]="u.hasError  ">Submit</button><br><br>User Values<br>
+
+
+    {{userCountry}}<br>{{userName}}<br>{{userAge}}<br>{{userRange}}
+
+</form>
+
+
+<p>.............................Basic Template Form Validations Tutorial.........................................</p>
+<form #f="ngForm" (ngSubmit)="onTempValidation(f.value)">
+
+    User Name<br><br>
+    <input type="text" ngModel #user="ngModel" required minlength="3" name="un" maxlength="8" name="userName"><br>
+    <div *ngIf="user.invalid && user.touched"><small style="color: red;" *ngIf="user.errors?.['required']">UserName is
+            Required</small>
+        <small style="color: red;" *ngIf="user.errors?.['minlength']">MinLength of 3 required currently
+            {{user.value.length}}</small>
+        <small style="color: red;" *ngIf="user.errors?.['maxlength']">MaxLength of 8 required currently
+            {{user.value.length}}</small>
+    </div><br>
+    Password<br>
+
+    <br>
+    <input type="password" ngModel #p="ngModel" required name="pass" minlength="8" maxlength="20"><br>
+    <div *ngIf="p.invalid && p.touched"><small style="color: red;" *ngIf="p.errors?.['required']">Password is
+            Required</small>
+        
+    </div><br>
+    Email<br><br>
+    <input type="email" ngModel #e="ngModel" required name="mail"
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
+        <div *ngIf="e.invalid && e.touched"><small style="color: red;" *ngIf="e.errors?.['required']">Mail is
+                Required</small>
+            <small style="color: red;" *ngIf="e.errors?.['pattern'] || e.errors?.['email']">Invalid Mail</small>
+           
+        </div>
+        <br>
+
+    <button type="submit" [disabled]="f.invalid">Submit</button>
 
 </form>

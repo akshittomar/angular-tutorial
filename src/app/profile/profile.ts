@@ -11,7 +11,8 @@ export class Profile {
 userName:string | null = "";
 constructor(private route:ActivatedRoute){}
 ngOnInit(){
-  this.userName = this.route.snapshot.paramMap.get('name');
+  //this.userName = this.route.snapshot.paramMap.get('name');
+  this.route.params.subscribe(d => this.userName = d['name']);
 }
 
 }

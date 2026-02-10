@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 @Component({
-    selector : "test-comp",
+    selector : "test-comp",imports:[],
 templateUrl:"./test.component.html",
 styleUrl:"./test.component.css"})
 
